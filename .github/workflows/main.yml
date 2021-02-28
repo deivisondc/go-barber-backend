@@ -34,8 +34,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
-          source: "dist"
-          target: "test"
+          source: "., !node_modules"
+          target: "~/app/gobarber-backend"
       
       # Replace old dist for the new one (that is on temp folder)
       # Access DO and install dependencies
